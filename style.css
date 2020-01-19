@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* Define CSS variables */
+:root {
+  --first-color: #ff598f;
+  --sec-color: #fd8a5e;
+  --third-color: #e0e300;
+  --forth-color: #01dddd;
+  --animate-speed: 1s;
+}
+
+/* CSS reset - remove defaut styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  /* prevent scrollbars on the body so that it is truly like a presentation */
+  overflow: hidden;
+}
+
+/* Page colors */
+#page-1 { background: var(--first-color); }
+#page-2 { background: var(--sec-color); }
+#page-3 { background: var(--third-color); }
+#page-4 { background: var(--forth-color); }
+
+
+/* Custom Styling and Utility Classes ----- */
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+  text-align: center;
+}
+
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+
+.page div {
+  display: flex;
+}
+
+.btn {
+  margin: 1.5rem;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  background: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  /* Transition the colors of the button on events */
+  transition: all 0.3s ease-out;
+}
+
+.btn:hover,
+.btn-dark {
+  background: #333;
+  color: #f4f4f4;
+}
+
+.btn-dark:hover {
+  color: #333;
+  background: #f4f4f4f;
+}
+
