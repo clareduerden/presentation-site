@@ -6,7 +6,7 @@
   --sec-color: #fd8a5e;
   --third-color: #e0e300;
   --forth-color: #01dddd;
-  --animate-speed: 1s;
+  --animate-speed: 1.5s;
 }
 
 /* CSS reset - remove defaut styling */
@@ -79,5 +79,39 @@ body {
 .btn-dark:hover {
   color: #333;
   background: #f4f4f4f;
+}
+
+/* Page Animations on Intro page --------- */
+
+/* Slide h1 in from the top */
+#page-1 h1 {
+  transform: translateY(-50vh);
+  animation: slide-down var(--animate-speed) forwards ease-in;
+}
+
+/* Slide the text in from the left */
+#page-1 p {
+  transform: translateX(-100vw);
+  /* animation: slide-from-left;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-timing-function: ease-in; */
+  animation: slide-from-left var(--animate-speed) forwards ease-in 1s;
+}
+
+/* Keyframes animations ------- */
+
+@keyframes slide-from-left {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-down {
+  to {
+    transform: translateY(0);
+  }
 }
 
